@@ -2454,3 +2454,9 @@ body.dark-mode .client-feedback-author .text-muted {
 }
 
 
+@media (max-width: 767px) {
+    .brand-text {
+        font-size: 0.75rem !important;
+        line-height: 1.1;
+    }
+}
