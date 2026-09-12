@@ -2475,3 +2475,16 @@ body.dark-mode .client-feedback-author .text-muted {
     }
 
 }
+/* =========================================================
+   LOGO - DARK MODE
+========================================================= */
+
+body.dark-mode .brand-logo {
+    background-color: #ffffff !important;
+
+    padding: 5px !important;
+
+    border-radius: 4px;
+
+    object-fit: contain;
+}
