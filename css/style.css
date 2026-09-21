@@ -2998,3 +2998,121 @@ input[type="radio"].form-check-input:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
 }
+
+
+
+/* Custom container width caps for 1400px and 1920px screens */
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1340px !important; /* Optimized width for 1400px+ displays */
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1720px !important; /* Expanded width for 27" 1440p/4K monitors */
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+/* Fix header overflow and button clipping on 1024px laptop screens */
+@media (max-width: 1024px) {
+  .navbar-nav .nav-link {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+  .navbar .btn, 
+  .navbar .contact-btn {
+    padding: 0.35rem 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+
+
+/* Optimize navbar spacing for laptop screens between 992px and 1350px */
+@media (min-width: 992px) and (max-width: 1350px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+    font-size: 0.88rem !important;
+  }
+  .navbar-brand span {
+    font-size: 0.85rem !important; /* Slightly scale down long brand text */
+  }
+}
+/* Optimize navbar spacing specifically for 1024px laptop screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+    font-size: 0.82rem !important;
+  }
+  .navbar-brand span {
+    font-size: 0.78rem !important;
+  }
+  .brand-logo {
+    max-height: 32px !important;
+  }
+}
+
+/* Reduce width of col-lg-8 in the hero section on large screens to force natural text wrapping */
+@media (min-width: 1400px) {
+  .hero-video-wrapper .col-lg-8 {
+    width: 60% !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-video-wrapper .col-lg-8 {
+    width: 50% !important;
+  }
+}
+
+/* Adjust brand title and header spacing for mobile screens up to 480px (including 320px) */
+@media (max-width: 480px) {
+  .navbar-brand span.fw-bold {
+    font-size: 0.65rem !important; /* Smaller text size for ultra-small screens */
+    letter-spacing: -0.5px;
+  }
+  .brand-logo {
+    max-height: 24px !important; /* Shrink logo slightly */
+  }
+  .navbar .container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+
+.rotating-badge {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: 40px;
+    top: -60px;
+    z-index: 10;
+
+    animation: rotateBadge 12s linear infinite;
+}
+
+@keyframes rotateBadge {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 767px) {
+    .rotating-badge {
+        width: 85px;
+        height: 85px;
+        right: 15px;
+        top: -42px;
+    }
+}
