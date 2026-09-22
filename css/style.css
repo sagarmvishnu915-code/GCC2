@@ -3138,3 +3138,7 @@ input[type="radio"].form-check-input:focus {
         top: -42px;
     }
 }
+/* Change color for main nav links */
+.navbar-nav .nav-link {
+    color: #000000 !important;
+}
